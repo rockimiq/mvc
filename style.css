@@ -1,0 +1,162 @@
+:root {
+  --main-accent-color: darkred;
+  --main-secondary-color: grey;
+
+  --col-one: #8B0000;
+  --col-two: #E47B2F;
+  --col-three: #BDAE6B;
+  --col-four: #4F8F64;
+  --col-five: #385A42;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+/* remove link underline */
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.topnav {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  border: 1px solid var(--col-three);
+  height: 5em;
+  margin: 2em;
+  width: 95vw;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 33.333%;
+  color: var(--col-three);
+}
+
+.button:hover {
+  color: var(--main-accent-color);
+  background: var(--col-three);
+}
+
+.works {
+  color: var(--main-accent-color);
+}
+
+.about, .intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.about > p {
+  text-align: center;
+  color: var(--col-three);
+}
+
+.about a {
+  color: var(--col-three)
+}
+
+.intro > img {
+  max-width: 100vw;
+}
+
+/* WORKS PAGE  */
+/* LIST, NOT INDIVIDUAL WORKS */
+
+.works_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  flex: 1 1 auto;
+}
+
+.works_list {
+  display: flex;
+  margin: 3em 2em 1em 2em;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.work_header {
+  /* padding: 0.5em 2em; */
+}
+
+.work_item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid var(--col-three);
+  color: var(--col-three);
+  text-align: right;
+  background: black;
+}
+
+.work_item > div:first-child {
+  text-align: left;
+}
+
+.work_item > div {
+  padding: 0.5em;
+}
+
+.work_item:not(.work_header):hover {
+  filter: invert(1);
+}
+
+/* INDIVIDUAL WORK PAGE */
+
+.work_body {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  height: 80vh;
+  border: 1px solid var(--col-three);
+}
+
+.work_column {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  color: var(--col-three);
+  overflow: auto;
+}
+
+.work_text_pre {
+  align-items: start;
+  border-right: 1px solid var(--col-three);
+}
+
+.work_one_third {
+  flex-basis: 33.33%;
+}
+.work_two_thirds {
+  flex-basis: 66.66%;
+}
+
+.work_p5_iframe {
+  width: 700px;
+  height: 700px;
+  border: 0;
+}
+
+
